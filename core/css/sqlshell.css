@@ -1,0 +1,96 @@
+.console {
+    background: black;
+    color: white;
+    font-family: monospace;
+    display: inline-block;
+    padding-left: 1em;
+    width: 100%;
+    /*border-radius: .5em;*/
+}
+.console-text {
+    padding: 2em 3em 3em 3em;
+}
+.wic-table{
+    display: table;
+    margin: 0 auto;
+}
+.wic-row{
+    display: table-row;
+}
+.wic-row-cell-l-h{
+    display: table-cell;
+    border: 13px solid transparent;
+    -webkit-border-image: url(border-w.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border-w.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border-w.png) 30 round;
+    padding: 0em 1em 0em 1em;
+}
+.wic-row-cell-l{
+    display: table-cell;
+    border: 13px solid transparent;
+    border-bottom: 0px;
+    -webkit-border-image: url(border-w.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border-w.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border-w.png) 30 round;
+    padding: 0em 1em 0em 1em;
+}
+.wic-row-cell{
+    display: table-cell;
+    border: 13px solid transparent;
+    border-left: 0px;
+    border-bottom: 0px;
+    -webkit-border-image: url(border-w.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border-w.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border-w.png) 30 round;
+    padding: 0em 1em 0em 1em;
+}
+.wic-row-cell-l-b{
+    display: table-cell;
+    border: 13px solid transparent;
+    -webkit-border-image: url(border-w.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border-w.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border-w.png) 30 round;
+    padding: 0em 1em 0em 1em;
+}
+.wic-row-cell-b{
+    display: table-cell;
+    border: 13px solid transparent;
+    border-left: 0px;
+    -webkit-border-image: url(border-w.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border-w.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border-w.png) 30 round;
+    padding: 0em 1em 0em 1em;
+}
+.cell-separator {
+    line-height: 5px;
+}
+.parpadea {
+  
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
