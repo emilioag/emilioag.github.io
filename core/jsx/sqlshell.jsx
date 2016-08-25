@@ -76,16 +76,3 @@ var Tables = React.createClass({
 ReactDOM.render(
     <Tables data={ window.cv['tables'] } />, document.getElementById('tables')
 );
-
-// ReactDOM.render(
-//     <SQLShellTable data={ window.cv['languages'] } query="> select * from languages;" />,
-//     document.getElementById('languages')
-// );
-// ReactDOM.render(
-//     <SQLShellTable data={ window.cv['awards'] } query="> select * from awards;" />,
-//     document.getElementById('awards')
-// );
-// ReactDOM.render(
-//     <SQLShellTable data={ window.cv['education'] } query="> select * from education;" />,
-//     document.getElementById('education')
-// );
