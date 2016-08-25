@@ -1,7 +1,7 @@
 var SQLShellTable = React.createClass({
     getInitialState() {
         return {
-            query: this.props.query,
+            query: "> select * from " + this.props.data['title'].toLowerCase() + ";",
             data: this.props.data
         };
     },
@@ -48,15 +48,44 @@ var SQLShellTable = React.createClass({
                 </div>;
     }
 });
+
+
+var Tables = React.createClass({
+    render: function () {
+        var self = this;
+        var rows = self.props.data.map(function ( item ) {
+            return  <span>
+                        <div className="row">
+                            <div className="col-md-3">
+                                <h2><i className={ item['icon'] } aria-hidden="true"></i> { item['title'] }</h2>
+                            </div>
+                            <div className="col-md-9">&nbsp;</div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-2">&nbsp;</div>
+                            <div className="col-md-9">
+                                <SQLShellTable data={ item }/>
+                            </div>
+                        </div>
+                    </span>;
+        });
+    return <div className="row">{ rows }</div>;
+    }
+});
+
 ReactDOM.render(
-    <SQLShellTable data={ window.cv['languages'] } query="> select * from languages;" />,
-    document.getElementById('languages')
+    <Tables data={ window.cv['tables'] } />, document.getElementById('tables')
 );
-ReactDOM.render(
-    <SQLShellTable data={ window.cv['awards'] } query="> select * from awards;" />,
-    document.getElementById('awards')
-);
-ReactDOM.render(
-    <SQLShellTable data={ window.cv['education'] } query="> select * from education;" />,
-    document.getElementById('education')
-);
+
+// ReactDOM.render(
+//     <SQLShellTable data={ window.cv['languages'] } query="> select * from languages;" />,
+//     document.getElementById('languages')
+// );
+// ReactDOM.render(
+//     <SQLShellTable data={ window.cv['awards'] } query="> select * from awards;" />,
+//     document.getElementById('awards')
+// );
+// ReactDOM.render(
+//     <SQLShellTable data={ window.cv['education'] } query="> select * from education;" />,
+//     document.getElementById('education')
+// );
